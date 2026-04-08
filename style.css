@@ -53,6 +53,7 @@ body{
     color: rgb(13, 15, 102);
     text-align: center;
     animation: fadeIn 2s ease-in-out;
+}
 /* ABOUT */
 .about{
     padding: 100px 20px;
