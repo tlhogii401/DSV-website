@@ -1,0 +1,263 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial;
+}
+:root{
+    --primary:#0c2d62;
+    --secondary:#1a4fa3;
+    --bg:#f8fafc;
+}
+body{
+    background:var(--bg);
+}
+/* NAVBAR */
+.navbar{
+    position:fixed;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    padding:15px 30px;
+    background:rgba(255,255,255,0.7);
+    backdrop-filter:blur(10px);
+    z-index:1000;
+}
+.logo{
+    font-weight:bold;
+    color:var(--primary);
+}
+.nav-links{
+    display:flex;
+    gap:20px;
+    list-style:none;
+}
+.nav-links a{
+    text-decoration:none;
+    color:var(--primary);
+}
+.menu-toggle{
+    display:none;
+    font-size:24px;
+}
+/* HERO */
+.hero{
+    height:100vh;
+    background-image:url('images/background.png');
+    background-size:cover;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.hero-content{
+    color: rgba(13, 15, 102, 0.8);
+    text-align:center;
+    animation: fadeInUp 1s ease forwards;
+}
+
+/* ABOUT */
+.about{
+    padding: 100px 20px;
+    background-color: #f8fafc;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.about-content h1{
+    background-color: rgba(255,255,255,0.7);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(245, 245, 245, 0.5);
+}
+.about-cointainer{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+    justify-content:center;
+    margin-top:30px;
+}
+.about h2{
+    font-size: 40px;
+    color: var(--primary);
+    margin: 10px 0;
+}
+.about p{
+    max-width: 600px;
+    color: var(--primary);
+    font-size: 18px;
+    line-height: 1.6;
+}
+.photo-container{
+    display:flex;
+    gap:20px;
+    justify-content:center;
+    margin-top:40px;
+}
+
+.photo-container img{
+    width:100%;
+    max-width:250px;
+    border-radius:50%;
+}
+
+/* SERVICES */
+.services{
+    padding:100px 20px;
+    text-align:center;
+}
+.services h2{
+    font-size:40px;
+    color:var(--primary);
+    margin-bottom:40px;
+}
+.services-container{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.service-card{
+    background:white;
+    padding: 40px 30px;
+    border-radius:15px;
+    width:250px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.service-card:hover{
+    transform:translateY(-10px) scale(1.05);
+}
+
+/* CONTACT */
+.contact{
+    padding:100px 20px;
+}
+
+.email-container{
+    max-width:500px;
+    margin:auto;
+}
+
+.email-container input,
+.email-container textarea{
+    width:100%;
+    padding:10px;
+    margin-bottom:20px;
+    border:3px solid #ccc;
+    border-radius: 30px;
+}
+
+.email-container button{
+    padding:10px;
+    background:var(--primary);
+    color:white;
+    border-radius: 30px;
+}
+
+/* MAP */
+map{
+    padding:80px 20px;
+    text-align:center;
+}
+
+.map h2{
+    font-size:32px;
+    margin-bottom:20px;
+}
+.map iframe{
+    width:100%;
+    height:400px;
+    border:0;
+    border-radius: 25px;
+    box-shadow: 0 20px 50px 
+}
+/* SOCIAL */
+.social-icons{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 1000;
+}
+.social-icons a{
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    box-shadow: 0.4px 12px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+/*WHATAPP ICON*/
+.whatsapp{
+    background-color: #25D366;
+}
+.whatsapp:hover {
+    transform: scale(1.1);
+}
+/*INSTAGRAM ICON*/
+.instagram{
+    background-color: #E1306C;
+}
+.instagram:hover {
+    transform: scale(1.1);
+}
+
+/* ANIMATION */
+.hidden{
+    opacity:0;
+    transform:translateY(40px);
+    transition:0.6s;
+}
+
+.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* MOBILE */
+@media(max-width:768px){
+    .nav-links{
+        position:absolute;
+        top:60px;
+        right:0;
+        background:white;
+        flex-direction:column;
+        width:100%;
+        display:none;
+    }
+
+    .nav-links.active{
+        display:flex;
+    }
+
+    .menu-toggle{
+        display:block;
+    }
+
+    .photo-container{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .services-container{
+        flex-direction:column;
+    }
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:20px;
+}
