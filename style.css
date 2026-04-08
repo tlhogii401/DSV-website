@@ -7,7 +7,7 @@
 :root{
     --primary:#0c2d62;
     --secondary:#1a4fa3;
-    --bg:#f8fafc;
+    --bg: #f8fafc;
 }
 body{
     background:var(--bg);
